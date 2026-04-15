@@ -34,7 +34,8 @@ app.get("/drive-image/:fileId", async (req, res) => {
     res.status(500).send("サーバーエラー");
   }
 });
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("サーバー起動 http://localhost:" + PORT);
+});
 });
